@@ -1,0 +1,61 @@
+header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+header a {
+  margin-right: 2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: blue;
+}
+
+header a:hover {
+  color: rgb(119, 119, 247);
+  text-decoration: underline;
+}
+
+main {
+  max-width: 80rem;
+  margin: auto;
+  padding-top: 5rem;
+}
+
+/*----- counter --------*/
+
+h1 {
+  text-align: center;
+}
+.result {
+  display: block;
+  border: 1px solid black;
+  width: 10rem;
+  height: 2rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: red;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.counter-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.counter-btns button {
+  border: none;
+  background-color: rgb(5, 77, 5);
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.counter-btns button:hover {
+  background-color: rgb(9, 117, 9);
+}
