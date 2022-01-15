@@ -4,6 +4,7 @@ export const slice = createSlice({
   name: "counter",
   initialState: {
     value: 0,
+    title: "Total",
   },
   reducers: {
     increment: (state) => {
@@ -12,11 +13,12 @@ export const slice = createSlice({
     decrement: (state) => {
       state.value -= 1;
     },
-    incrementTwo: (state) => {
-      state.value += 2;
+    incrementTwo: (state, action) => {
+      state.value += action.payload.two;
+      //   state.value += action.payload.four;
     },
-    decrementThree: (state) => {
-      state.value -= 3;
+    decrementThree: (state, action) => {
+      state.value -= action.payload;
     },
   },
 });
@@ -24,6 +26,18 @@ export const slice = createSlice({
 export const { increment, decrement, incrementTwo, decrementThree } =
   slice.actions;
 
-export const resultValue = (state) => state.counter.value;
+// export const resultValue = (state) => state.counter.value;
+// export const titleValue = (state) => state.counter.title;
 
 export default slice.reducer;
+
+/**
+    
+    - export action function 
+    
+    - export state value which are commented now. But fetch state value by useSelection
+            ex:  const result = useSelector((state) => state.counter.value);
+
+    - payload carry one value or object of data
+
+ */
