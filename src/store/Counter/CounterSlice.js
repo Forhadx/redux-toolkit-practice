@@ -4,17 +4,22 @@ export const slice = createSlice({
   name: "counter",
   initialState: {
     value: 0,
+    arr: [1, 2, 4],
     title: "Total",
   },
   reducers: {
     increment: (state) => {
+      console.log("valu: ", state.arr);
       state.value += 1;
     },
     decrement: (state) => {
       state.value -= 1;
     },
     incrementTwo: (state, action) => {
-      state.value += action.payload.two;
+      return {
+        ...state,
+        value: state.value + action.payload.two,
+      };
       //   state.value += action.payload.four;
     },
     decrementThree: (state, action) => {

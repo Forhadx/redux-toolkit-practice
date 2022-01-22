@@ -59,3 +59,125 @@ h1 {
 .counter-btns button:hover {
   background-color: rgb(9, 117, 9);
 }
+
+/*----- Post ---------*/
+.post-page {
+  margin: auto;
+}
+
+form {
+  width: 20rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input {
+  /* width: 80%; */
+  padding: 0.3rem 1rem;
+}
+button {
+  border: none;
+  color: white;
+  background-color: purple;
+  padding: 0.4rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+  width: 20rem;
+  margin: auto;
+  list-style: none;
+}
+.post-item {
+  padding: 1rem;
+  box-shadow: 0.1rem 0.1rem 1rem 0.1rem gray;
+  margin-bottom: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.icons-list {
+  display: flex;
+}
+.icons-list svg {
+  cursor: pointer;
+}
+
+span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* loader */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #db3434;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center .loader {
+  border-top: 5px solid #349edb;
+  width: 25px;
+  height: 25px;
+}
+
+.alert-msg {
+  width: 20rem;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: rgb(204, 204, 235);
+  border-radius: 0.3rem;
+  color: rgb(59, 59, 226);
+  font-weight: bold;
+}
+
+.delete-loader .loader {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+}
+
+.edit-loader .loader {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  border-top: 5px solid #349edb;
+}

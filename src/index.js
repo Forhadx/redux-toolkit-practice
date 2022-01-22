@@ -4,8 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import store from "./store/store";
+
 import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+
+import counterReducer from "./store/Counter/CounterSlice";
+import postsReducer from "./store/Posts/PostSlice";
+
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+    posts: postsReducer,
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +29,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
