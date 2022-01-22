@@ -50,7 +50,7 @@ export const deletePost = createAsyncThunk(
   "posts/deletePost",
   async (id, { rejectWithValue }) => {
     try {
-      await axios.delete(`${URL}/namelist/${id}.jsn`);
+      await axios.delete(`${URL}/namelist/${id}.json`);
       return id;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -62,7 +62,7 @@ export const editPost = createAsyncThunk(
   "posts/editPost",
   async (data, { rejectWithValue }) => {
     try {
-      let result = await axios.put(`${URL}/namelist/${data.id}.jsn`, data);
+      let result = await axios.put(`${URL}/namelist/${data.id}.json`, data);
       return result.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
