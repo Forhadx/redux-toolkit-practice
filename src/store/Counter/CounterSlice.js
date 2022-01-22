@@ -9,7 +9,6 @@ export const slice = createSlice({
   },
   reducers: {
     increment: (state) => {
-      console.log("valu: ", state.arr);
       state.value += 1;
     },
     decrement: (state) => {
